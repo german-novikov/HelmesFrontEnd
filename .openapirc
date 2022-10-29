@@ -1,0 +1,9 @@
+{
+  "npmName": "@test-work/openapi-rxjs",
+  "npmVersion": "1.0.0",
+  "snapshot": false,
+  "supportsES6": false,
+  "nullSafeAdditionalProps": false,
+  "legacyDiscriminatorBehavior": false,
+  "enumPropertyNaming": "original"
+}
