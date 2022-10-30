@@ -13,22 +13,17 @@
 
 /**
  * @export
- * @interface UserSelectRequest
+ * @interface ApiErrorItem
  */
-export interface UserSelectRequest {
+export interface ApiErrorItem {
     /**
      * @type {string}
-     * @memberof UserSelectRequest
+     * @memberof ApiErrorItem
      */
-    name: string;
+    message?: string;
     /**
-     * @type {Array<number>}
-     * @memberof UserSelectRequest
+     * @type {Array<string>}
+     * @memberof ApiErrorItem
      */
-    sectors: Array<number>;
-    /**
-     * @type {boolean}
-     * @memberof UserSelectRequest
-     */
-    agreedWithTerms: boolean;
+    args?: Array<string>;
 }

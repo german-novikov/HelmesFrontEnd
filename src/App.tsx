@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import SelectPage from "./SelectorPage";
+import GlobalStyles from "./GlobalStyles";
 
 function App() {
   useEffect(() => {
@@ -8,7 +9,10 @@ function App() {
   }, []);
 
   return (
-      <SelectPage />
+      <>
+        <GlobalStyles />
+        <SelectPage />
+      </>
   );
 }
 

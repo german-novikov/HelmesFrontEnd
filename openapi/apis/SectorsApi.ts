@@ -14,6 +14,7 @@
 import { Observable } from 'rxjs';
 import { BaseAPI } from '../runtime';
 import {
+    ApiError,
     Sector,
 } from '../models';
 

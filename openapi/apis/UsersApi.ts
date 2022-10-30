@@ -14,17 +14,18 @@
 import { Observable } from 'rxjs';
 import { BaseAPI, HttpHeaders, throwIfNullOrUndefined, encodeURI } from '../runtime';
 import {
+    ApiError,
     UserSelect,
     UserSelectRequest,
 } from '../models';
 
 export interface CreateUserSelectRequest {
-    userSelectRequest?: UserSelectRequest;
+    userSelectRequest: UserSelectRequest;
 }
 
 export interface UpdateUserSelectRequest {
     id: number;
-    userSelectRequest?: UserSelectRequest;
+    userSelectRequest: UserSelectRequest;
 }
 
 /**
@@ -35,6 +36,7 @@ export class UsersApi extends BaseAPI {
     /**
      */
     createUserSelect = ({ userSelectRequest }: CreateUserSelectRequest): Observable<UserSelect> => {
+        throwIfNullOrUndefined(userSelectRequest, 'createUserSelect');
 
         const headers: HttpHeaders = {
             'Content-Type': 'application/json',
@@ -52,6 +54,7 @@ export class UsersApi extends BaseAPI {
      */
     updateUserSelect = ({ id, userSelectRequest }: UpdateUserSelectRequest): Observable<UserSelect> => {
         throwIfNullOrUndefined(id, 'updateUserSelect');
+        throwIfNullOrUndefined(userSelectRequest, 'updateUserSelect');
 
         const headers: HttpHeaders = {
             'Content-Type': 'application/json',
